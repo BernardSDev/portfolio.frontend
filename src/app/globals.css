@@ -6,23 +6,18 @@
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
-    --color-primary: var(--primary);
     --color-border: var(--border);
 }
 
 :root {
-    --background: #ffffff;        /* Light background */
-    --foreground: #000000;        /* Dark text */
-
-    --primary: #000000;
+    --background: #ffffff;
+    --foreground: #000000;
     --border: #e2e8f0;
 }
 
 :root.dark {
-    --background: #000000;        /* Dark background */
-    --foreground: #f8fafc;        /* Light text */
-
-    --primary: #000000;
+    --background: #000000;
+    --foreground: #f8fafc;
     --border: #334155;
 }
 

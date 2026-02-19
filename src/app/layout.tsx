@@ -33,7 +33,7 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
       >
-          <main className="flex min-h-screen w-full max-w-4xl flex-col items-center justify-between py-12 px-4 bg-primary sm:items-start">{children}</main>
+          <main className="flex min-h-screen w-full max-w-4xl flex-col items-center justify-between py-12 px-4 sm:items-start">{children}</main>
       </ThemeProvider>
       </body>
     </html>
