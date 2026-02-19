@@ -5,14 +5,19 @@ import {RiTwitterXLine} from "react-icons/ri";
 function Identity() {
     return(
         <div className={`text-6xl border-b border-border pb-12`}>
-            <Image
-                src={"/bernard.png"}
-                alt={"Bernard"}
-                width={256}
-                height={256}
-                className={"rounded-full w-24 h-24"}
-            />
-            <p className={"text-xl mt-4"}>Lorem ipsum dolor sit amet.</p>
+            <div className={"flex gap-4 items-center"}>
+                <Image
+                    src={"/bernard.png"}
+                    alt={"Bernard"}
+                    width={256}
+                    height={256}
+                    className={"rounded-full w-24 h-24"}
+                />
+                <div>
+                    <h3 className={"text-3xl font-bold"}>Bernard S. Apoh</h3>
+                    <p className={"text-base"}>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
             <p className={"text-xl mt-4"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Vestibulum sodales sollicitudin orci quis venenatis. Donec tempus lorem ut nisi scelerisque vestibulum.
                 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
