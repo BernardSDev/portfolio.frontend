@@ -1,0 +1,14 @@
+[00:05:51.315] Server  ERROR   ⨯ Error: Cannot find module 'next/dist/client/components/builtin/global-not-found'
+Require stack:
+- /Users/bernardsamapoh/Documents/Software Development/code.lib/me/portfolio/frontend-portfolio/node_modules/next/dist/server/dev/on-demand-entry-handler.js
+- /Users/bernardsamapoh/Documents/Software Development/code.lib/me/portfolio/frontend-portfolio/node_modules/next/dist/server/dev/hot-reloader-turbopack.js
+- /Users/bernardsamapoh/Documents/Software Development/code.lib/me/portfolio/frontend-portfolio/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/bernardsamapoh/Documents/Software Development/code.lib/me/portfolio/frontend-portfolio/node_modules/next/dist/server/lib/router-server.js
+- /Users/bernardsamapoh/Documents/Software Development/code.lib/me/portfolio/frontend-portfolio/node_modules/next/dist/server/lib/start-server.js
+[00:05:51.442] Server  ERROR   ⨯ Error: Cannot find module 'next/dist/client/components/builtin/global-not-found'
+Require stack:
+- /Users/bernardsamapoh/Documents/Software Development/code.lib/me/portfolio/frontend-portfolio/node_modules/next/dist/server/dev/on-demand-entry-handler.js
+- /Users/bernardsamapoh/Documents/Software Development/code.lib/me/portfolio/frontend-portfolio/node_modules/next/dist/server/dev/hot-reloader-turbopack.js
+- /Users/bernardsamapoh/Documents/Software Development/code.lib/me/portfolio/frontend-portfolio/node_modules/next/dist/server/lib/router-utils/setup-dev-bundler.js
+- /Users/bernardsamapoh/Documents/Software Development/code.lib/me/portfolio/frontend-portfolio/node_modules/next/dist/server/lib/router-server.js
+- /Users/bernardsamapoh/Documents/Software Development/code.lib/me/portfolio/frontend-portfolio/node_modules/next/dist/server/lib/start-server.js
