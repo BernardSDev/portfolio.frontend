@@ -1,9 +1,9 @@
+import Identity from "@/components/Identity/Identity";
+
 export default function Home() {
   return (
     <>
-        <div className={`text-6xl`}>
-            Identity section
-        </div>
+        <Identity />
         <div className={`text-6xl`}>
             Capabilities
         </div>
