@@ -13,10 +13,10 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
     return (
         <html lang="en" suppressHydrationWarning>
         <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased flex min-h-screen items-center justify-center font-sans bg-background text-foreground transition-colors duration-300`}
+            className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans grid place-items-center min-h-dvh bg-background text-foreground p-3 sm:p-6`}
         >
         <ThemeProviderClient>
-            <main className="flex min-h-screen w-full max-w-4xl flex-col items-center justify-between py-12 px-4">
+            <main className="bg-background w-full max-w-2xl overflow-hidden p-6 sm:p-1">
                 {children}
             </main>
         </ThemeProviderClient>
