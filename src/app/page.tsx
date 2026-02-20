@@ -3,12 +3,9 @@ import Capabilities from "@/components/Capabilities/Capabilities";
 
 export default function Home() {
   return (
-    <div className={""}>
+    <div>
         <Identity />
         <Capabilities />
-        <div className={`text-6xl`}>
-            Projects
-        </div>
     </div>
   );
 }

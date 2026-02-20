@@ -18,11 +18,9 @@ function Identity() {
                     <p className={"text-base"}>Lorem ipsum dolor sit amet.</p>
                 </div>
             </div>
-            <p className={"text-xl mt-4"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            <p className={"text-lg mt-4"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Vestibulum sodales sollicitudin orci quis venenatis. Donec tempus lorem ut nisi scelerisque vestibulum.
-                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                Pellentesque sodales velit in neque volutpat consequat. Sed nec mattis enim, ut gravida est. In non arcu dui.
-                Nullam suscipit aliquet feugiat. Mauris et consectetur turpis. Donec quis libero sagittis, suscipit justo et,
+                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris et consectetur turpis. Donec quis libero sagittis, suscipit justo et,
                 commodo lectus.
             </p>
             <div className={"text-xl mt-4 flex items-center flex-wrap gap-2"}>

@@ -29,6 +29,12 @@ function Skills() {
             title: "Values",
             text: "Donec quis libero sagittis, suscipit justo et, commodo lectus.",
         },
+        {
+            image: "/mentorship.jpg",
+            credit: "gilles roux",
+            title: "Mentorship and coaching",
+            text: "I guide junior developers with code reviews"
+        }
     ]
 
     const [currentIndex, setCurrentIndex] = useState(0)
@@ -70,7 +76,7 @@ function Skills() {
                         slides.map((slide, index) => (
                         <div
                             key={index}
-                            className={`flex-shrink-0 h-[400px] text-white text-xl font-semibold flex flex-col gap-6`}
+                            className={`flex-shrink-0 h-[400px] text-white flex flex-col gap-6`}
                             style={{ width: `${100 / visibleSlides}%` }}
                         >
                             <Image
@@ -80,8 +86,8 @@ function Skills() {
                                 height={400}
                                 className="rounded-2xl h-64 w-full object-cover"
                             />
-                            <h2 className={"text-foreground"}>{slide.title}</h2>
-                            <p className={"text-foreground"}>{slide.text}</p>
+                            <h2 className={"text-xl text-foreground font-semibold"}>{slide.title}</h2>
+                            <p className={"text-lg text-foreground"}>{slide.text}</p>
                         </div>
                     ))}
                 </div>
