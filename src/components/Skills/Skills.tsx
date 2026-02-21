@@ -12,13 +12,17 @@ function Skills() {
 
     const containerRef = useRef<HTMLDivElement>(null)
 
-    const {isAtStart, isAtEnd, scroll} = useCarouselScroll(containerRef)
+    const {
+        isAtStart,
+        isAtEnd,
+        scroll
+    } = useCarouselScroll(containerRef)
 
     return (
-        <div className="w-full overflow-hidden">
+        <div className={"w-full overflow-hidden"}>
             <div
                 ref={containerRef}
-                className="flex gap-5 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
+                className={"flex gap-5 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"}
             >
                 {
                     SkillData.map((slide) => (
@@ -31,12 +35,12 @@ function Skills() {
             </div>
 
             <CarouselControls
-                onLeft = {() => scroll("left")}
-                onRight = {() => scroll("right")}
-                disableLeft = {isAtStart}
-                disableRight = {isAtEnd}
-                leftIcon = {<GrFormPrevious size={28} />}
-                rightIcon = {<MdOutlineNavigateNext size={28} />}
+                onLeft={() => scroll("left")}
+                onRight={() => scroll("right")}
+                disableLeft={isAtStart}
+                disableRight={isAtEnd}
+                leftIcon={<GrFormPrevious size={28} />}
+                rightIcon={<MdOutlineNavigateNext size={28} />}
             />
         </div>
     )

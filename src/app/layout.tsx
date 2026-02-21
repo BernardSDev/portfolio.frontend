@@ -16,7 +16,7 @@ export default function RootLayout({children}: {children: React.ReactNode}) {
             className={`${geistSans.variable} ${geistMono.variable} antialiased font-sans grid place-items-center min-h-dvh bg-background text-foreground p-3 sm:p-6`}
         >
         <ThemeProviderClient>
-            <main className="bg-background w-full max-w-4xl overflow-hidden p-6 sm:p-1">
+            <main className={"bg-background w-full max-w-4xl overflow-hidden p-6 sm:p-1"}>
                 {children}
             </main>
         </ThemeProviderClient>

@@ -1,8 +1,8 @@
 "use client"
 
-import { useRouter, useParams } from "next/navigation"
-import { SkillData } from "@/data/SkillData"
-import { IoIosArrowRoundBack } from "react-icons/io";
+import {useRouter, useParams} from "next/navigation"
+import {SkillData} from "@/data/SkillData"
+import {IoIosArrowRoundBack} from "react-icons/io";
 import SmartImage from "@/components/SmartImage/SmartImage";
 import SmartButton from "@/components/SmartButton/SmartButton";
 
@@ -17,10 +17,13 @@ export default function Page() {
 
     if (!skill) {
         return (
-            <div className="max-w-4xl mx-auto px-4 py-16 text-center">
-                <p className="text-gray-500 mb-4">Content not found.</p>
+            <div className={"max-w-4xl mx-auto px-4 py-16 text-center"}>
+                <p className={"text-gray-500 mb-4"}>Content not found.</p>
 
-                <SmartButton variant="ghost" onClick={() => router.back()}>
+                <SmartButton
+                    variant="ghost"
+                    onClick={() => router.back()}
+                >
                     <IoIosArrowRoundBack size={28} />
                 </SmartButton>
             </div>
@@ -29,7 +32,6 @@ export default function Page() {
 
     return (
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-
             <SmartButton onClick={() => router.back()}>
                 <IoIosArrowRoundBack size={28} /> Go Back
             </SmartButton>

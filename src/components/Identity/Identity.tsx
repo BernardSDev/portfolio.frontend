@@ -4,7 +4,7 @@ import SmartImage from "@/components/SmartImage/SmartImage";
 
 function Identity() {
     return(
-        <div className={`border-b border-border pb-8`}>
+        <div className={"border-b border-border pb-8"}>
             <div className={"flex flex-col sm:flex-row gap-4 sm:items-center"}>
                 <SmartImage
                     variant={"rounded"}
@@ -26,7 +26,7 @@ function Identity() {
                 Mauris et consectetur turpis. Donec quis libero sagittis, suscipit justo et,
                 commodo lectus.
             </p>
-            <div className="mt-6 flex flex-wrap items-center gap-3">
+            <div className={"mt-6 flex flex-wrap items-center gap-3"}>
                 {
                     SocialLinks.map(({href, icon: Icon}) => (
                         <SocialLinkItem
