@@ -7,6 +7,12 @@ import {GrFormPrevious} from "react-icons/gr";
 import {SkillData} from "@/data/SkillData";
 import Link from "next/link";
 
+function capText(text: string, maxLength: number): string {
+    if (text.length <= maxLength) return text
+
+    return text.slice(0, maxLength).trim() + "..."
+}
+
 function Skills() {
     const containerRef = useRef<HTMLDivElement>(null)
 
@@ -73,7 +79,7 @@ function Skills() {
                             </h2>
 
                             <p className="text-sm sm:text-base text-foreground/70 leading-relaxed">
-                                {slide.text}
+                                {capText(slide.text, 47)}
                             </p>
                         </div>
                     </Link>
