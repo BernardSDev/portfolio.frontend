@@ -1,12 +1,11 @@
-import { IconType } from "react-icons";
+import {IconType} from "react-icons";
+import {FaGithub, FaLinkedin, FaWhatsapp} from "react-icons/fa";
+import {RiTwitterXLine} from "react-icons/ri";
 
 interface SocialLink {
     href: string;
     icon: IconType;
 }
-
-import {FaGithub, FaLinkedin, FaWhatsapp} from "react-icons/fa";
-import {RiTwitterXLine} from "react-icons/ri";
 
 export const SocialLinks: SocialLink[] = [
     {
