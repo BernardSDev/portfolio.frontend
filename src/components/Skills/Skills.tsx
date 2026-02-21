@@ -1,11 +1,11 @@
 "use client"
 
 import { useRef, useState, useEffect } from "react"
-import Image from "next/image"
 import { MdOutlineNavigateNext } from "react-icons/md";
 import {GrFormPrevious} from "react-icons/gr";
 import {SkillData} from "@/data/SkillData";
 import Link from "next/link";
+import SmartImage from "@/components/SmartImage/SmartImage";
 
 function capText(text: string, maxLength: number): string {
     if (text.length <= maxLength) return text
@@ -65,12 +65,13 @@ function Skills() {
                         key={index}
                         className="snap-start shrink-0 w-[92%] sm:w-[48%] lg:w-[32%] flex flex-col gap-4"
                     >
-                        <Image
+                        <SmartImage
+                            variant={"profile"}
                             src={slide.image}
                             alt={slide.title}
                             width={500}
                             height={400}
-                            className="rounded-2xl h-56 w-full object-cover"
+                            className={"rounded-2xl h-56 w-full object-cover"}
                         />
 
                         <div className="space-y-2">

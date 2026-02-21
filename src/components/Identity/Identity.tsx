@@ -8,7 +8,7 @@ function Identity() {
             <div className={"flex flex-col sm:flex-row gap-4 sm:items-center"}>
                 <SmartImage
                     variant={"profile"}
-                    src={"/bernard.png"}
+                    src={"/images/fallback.jpg"}
                     alt={"Bernard"}
                     width={96}
                     height={96}
