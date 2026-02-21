@@ -56,11 +56,8 @@ function Skills() {
                 {
                     SkillData.map((slide) => (
                         <SkillCard
-                            key = {slide.title}
-                            title = {slide.title}
-                            text = {slide.text}
-                            image = {slide.image}
-                            slug = {slide.slug}
+                            key={slide.slug}
+                            {...slide}
                         />
                     ))
                 }
