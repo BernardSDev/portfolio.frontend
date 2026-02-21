@@ -1,13 +1,11 @@
+import {slugifyText} from "@/helpers/slugifyText";
+
 interface Skill {
     image: string
     credit: string
     title: string
     text: string
     slug: string
-}
-
-function slugify(text: string) {
-    return text.toLowerCase().replace(/\s+/g, "-")
 }
 
 export const SkillData: Skill[] = [
@@ -19,7 +17,7 @@ export const SkillData: Skill[] = [
             "pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam " +
             "urna tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada lacinia " +
             "integer nunc posuere ut hendrerit.",
-        slug: slugify("Thinking technical"),
+        slug: slugifyText("Thinking technical"),
     },
     {
         image: "/execution.jpg",
@@ -28,7 +26,7 @@ export const SkillData: Skill[] = [
         text: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id " +
             "cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus nec " +
             "metus bibendum egestas iaculis massa nisl malesuada lacinia integer nunc posuere ut hendrerit.",
-        slug: slugify("Execution and delivery"),
+        slug: slugifyText("Execution and delivery"),
     },
     {
         image: "/adaptability.jpg",
@@ -37,7 +35,7 @@ export const SkillData: Skill[] = [
         text: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat " +
             "in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar vivamus fringilla lacus " +
             "nec metus bibendum egestas iaculis massa nisl malesuada lacinia integer nunc posuere ut hendrerit.",
-        slug: slugify("Adaptability"),
+        slug: slugifyText("Adaptability"),
     },
     {
         image: "/values.jpg",
@@ -47,7 +45,7 @@ export const SkillData: Skill[] = [
             "sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna tempor pulvinar " +
             "vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada lacinia integer nunc posuere ut " +
             "hendrerit..",
-        slug: slugify("Values"),
+        slug: slugifyText("Values"),
     },
     {
         image: "/mentorship2.jpg",
@@ -57,6 +55,6 @@ export const SkillData: Skill[] = [
             "pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus leo eu aenean sed diam urna " +
             "tempor pulvinar vivamus fringilla lacus nec metus bibendum egestas iaculis massa nisl malesuada lacinia integer " +
             "nunc posuere ut hendrerit.",
-        slug: slugify("Mentorship"),
+        slug: slugifyText("Mentorship"),
     },
 ]

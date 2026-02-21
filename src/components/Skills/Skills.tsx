@@ -6,12 +6,7 @@ import {GrFormPrevious} from "react-icons/gr";
 import {SkillData} from "@/data/SkillData";
 import Link from "next/link";
 import SmartImage from "@/components/SmartImage/SmartImage";
-
-function capText(text: string, maxLength: number): string {
-    if (text.length <= maxLength) return text
-
-    return text.slice(0, maxLength).trim() + "..."
-}
+import {capText} from "@/helpers/capText";
 
 function Skills() {
     const containerRef = useRef<HTMLDivElement>(null)
