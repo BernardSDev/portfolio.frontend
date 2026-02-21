@@ -1,51 +1,18 @@
 "use client"
 
-import {useRef, useState, useEffect} from "react"
+import {useRef} from "react"
 import {MdOutlineNavigateNext} from "react-icons/md"
 import {GrFormPrevious} from "react-icons/gr"
 import {SkillData} from "@/data/SkillData"
 import SkillCard from "@/components/SkillCard/SkillCard";
 import CarouselControls from "@/components/CarouselControls/CarouselControls";
+import {useCarouselScroll} from "@/hooks/useCarouselScroll";
 
 function Skills() {
+
     const containerRef = useRef<HTMLDivElement>(null)
 
-    const [isAtStart, setIsAtStart] = useState(true)
-    const [isAtEnd, setIsAtEnd] = useState(false)
-
-    const checkScrollPosition = () => {
-        const container = containerRef.current
-        if (!container) return
-
-        const { scrollLeft, scrollWidth, clientWidth } = container
-
-        setIsAtStart(scrollLeft <= 5)
-        setIsAtEnd(scrollLeft + clientWidth >= scrollWidth - 5)
-    }
-
-    useEffect(() => {
-        const container = containerRef.current
-        if (!container) return
-
-        checkScrollPosition()
-        container.addEventListener("scroll", checkScrollPosition)
-
-        return () => {
-            container.removeEventListener("scroll", checkScrollPosition)
-        }
-    }, [])
-
-    const scroll = (direction: "left" | "right") => {
-        const container = containerRef.current
-        if (!container) return
-
-        const scrollAmount = container.offsetWidth
-
-        container.scrollBy({
-            left: direction === "right" ? scrollAmount : -scrollAmount,
-            behavior: "smooth"
-        })
-    }
+    const {isAtStart, isAtEnd, scroll} = useCarouselScroll(containerRef)
 
     return (
         <div className="w-full overflow-hidden">
