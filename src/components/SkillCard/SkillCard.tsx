@@ -1,6 +1,6 @@
 import Link from "next/link"
 import SmartImage from "@/components/SmartImage/SmartImage"
-import {capText} from "@/helpers/capText"
+import SkillCardInfo from "@/components/SkillCardInfo/SkillCardInfo";
 
 interface Props {
     title: string
@@ -20,16 +20,10 @@ function SkillCard({title, text, image, slug}: Props) {
                 alt={title}
                 className="rounded-2xl h-56 w-full object-cover"
             />
-
-            <div className="space-y-2">
-                <h2 className="text-lg sm:text-xl font-semibold">
-                    {title}
-                </h2>
-
-                <p className="text-sm sm:text-base text-foreground/70 leading-relaxed">
-                    {capText(text, 47)}
-                </p>
-            </div>
+            <SkillCardInfo
+                title={title}
+                text={text}
+            />
         </Link>
     )
 }
