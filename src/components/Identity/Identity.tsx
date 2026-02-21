@@ -1,17 +1,18 @@
-import Image from "next/image";
 import SocialLinkItem from "@/components/SocialLink/SocialLinkItem";
 import {SocialLinks} from "@/data/SocialLinks";
+import SmartImage from "@/components/SmartImage/SmartImage";
 
 function Identity() {
     return(
         <div className={`border-b border-border pb-8`}>
             <div className={"flex flex-col sm:flex-row gap-4 sm:items-center"}>
-                <Image
+                <SmartImage
+                    variant={"profile"}
                     src={"/bernard.png"}
                     alt={"Bernard"}
-                    width={256}
-                    height={256}
-                    className={"rounded-full w-24 h-24"}
+                    width={96}
+                    height={96}
+                    className={"w-24 h-24"}
                 />
                 <div>
                     <h3 className={"text-2xl sm:text-3xl font-bold"}>Bernard S. Apoh</h3>

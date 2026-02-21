@@ -2,8 +2,8 @@
 
 import { useRouter, useParams } from "next/navigation"
 import { SkillData } from "@/data/SkillData"
-import Image from "next/image"
 import { IoIosArrowRoundBack } from "react-icons/io";
+import SmartImage from "@/components/SmartImage/SmartImage";
 
 
 export default function Page() {
@@ -43,14 +43,10 @@ export default function Page() {
                 {skill.title}
             </h1>
 
-            <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden shadow-lg mb-4">
-                <Image
-                    src={skill.image}
-                    alt={skill.title}
-                    fill
-                    className="object-cover"
-                />
-            </div>
+            <SmartImage
+                src={skill.image}
+                alt={skill.title}
+            />
 
             <p className="text-sm text-gray-500 mb-8">
                 Photo credit: {skill.credit}
