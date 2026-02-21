@@ -3,28 +3,29 @@
 import {ButtonHTMLAttributes, ReactNode} from "react";
 import {cn} from "@/lib/utils";
 
-interface SmartButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    variant?: "primary" | "ghost" | "circle";
+export type SmartButtonVariant = "primary" | "ghost" | "circle";
+
+export interface SmartButtonProps
+    extends ButtonHTMLAttributes<HTMLButtonElement> {
+    variant?: SmartButtonVariant;
     children?: ReactNode;
 }
 
 function SmartButton({
-                        variant = "primary",
-                        children,
-                        className,
-                        disabled,
-                        ...props
-                    }: SmartButtonProps) {
+                         variant = "primary",
+                         children,
+                         className,
+                         disabled,
+                         ...props
+                     }: SmartButtonProps) {
 
-    const baseStyles = "transition flex items-center justify-center cursor-pointer";
+    const baseStyles = "inline-flex items-center justify-center transition duration-200";
 
-    const variants = {
+    const variants: Record<SmartButtonVariant, string> = {
         primary: "text-sm text-primary hover:underline",
         ghost: "text-blue-600 hover:underline",
-        circle: "rounded-full p-2 text-primary",
+        circle: "rounded-full p-2 text-primary bg-border",
     };
-
-    const disabledStyles = disabled ? "bg-border/20 cursor-default" : "hover:opacity-90";
 
     return (
         <button
@@ -33,8 +34,7 @@ function SmartButton({
             className={cn(
                 baseStyles,
                 variants[variant],
-                variant === "circle" && "bg-border",
-                disabledStyles,
+                disabled ? "opacity-50 cursor-not-allowed pointer-events-none" : "cursor-pointer hover:opacity-90",
                 className
             )}
         >
