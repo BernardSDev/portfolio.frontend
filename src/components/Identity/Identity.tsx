@@ -26,10 +26,38 @@ function Identity() {
                 commodo lectus.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-3">
-                <FaGithub size={28} className="text-primary" />
-                <FaLinkedin size={28} className="text-primary" />
-                <RiTwitterXLine size={28} className="text-primary" />
-                <FaWhatsapp size={28} className="text-primary" />
+                <a
+                    href="https://github.com/BernardSDev"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary"
+                >
+                    <FaGithub size={28} />
+                </a>
+                <a
+                    href="https://www.linkedin.com/in/bernard-s-apoh-b04134230/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary"
+                >
+                    <FaLinkedin size={28} />
+                </a>
+                <a
+                    href="https://x.com/BernardSam_Apoh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary"
+                >
+                    <RiTwitterXLine size={28} />
+                </a>
+                <a
+                    href="https://wa.me/233248315982"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary"
+                >
+                    <FaWhatsapp size={28} />
+                </a>
 
                 <input
                     placeholder={"Connect via mail"}
