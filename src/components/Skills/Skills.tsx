@@ -5,6 +5,7 @@ import Image from "next/image"
 import { MdOutlineNavigateNext } from "react-icons/md";
 import {GrFormPrevious} from "react-icons/gr";
 import {SkillData} from "@/data/SkillData";
+import Link from "next/link";
 
 function Skills() {
     const containerRef = useRef<HTMLDivElement>(null)
@@ -54,7 +55,7 @@ function Skills() {
             >
                 {
                     SkillData.map((slide, index) => (
-                    <div
+                    <Link href={`/w/${slide.slug}`}
                         key={index}
                         className="snap-start shrink-0 w-[92%] sm:w-[48%] lg:w-[32%] flex flex-col gap-4"
                     >
@@ -75,7 +76,7 @@ function Skills() {
                                 {slide.text}
                             </p>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
 
