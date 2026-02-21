@@ -12,7 +12,7 @@ function slugify(text: string) {
 
 export const SkillData: Skill[] = [
     {
-        image: "/thinkingxx.jpg",
+        image: "/thinking.jpg",
         credit: "milad fakurian",
         title: "Thinking technical",
         text: "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae " +

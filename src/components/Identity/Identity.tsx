@@ -7,7 +7,7 @@ function Identity() {
         <div className={`border-b border-border pb-8`}>
             <div className={"flex flex-col sm:flex-row gap-4 sm:items-center"}>
                 <SmartImage
-                    variant={"profile"}
+                    variant={"rounded"}
                     src={"/bernard.png"}
                     alt={"Bernard"}
                     width={96}

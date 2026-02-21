@@ -5,59 +5,58 @@ import {useState} from "react";
 import {cn} from "@/lib/utils";
 
 interface SmartImageProps extends ImageProps {
-    variant?: "profile" | "feature";
+    variant?: "rounded" | "responsive";
     className?: string;
     fallbackSrc?: string;
 }
 
 function SmartImage({
-                       variant = "feature",
-                       className,
-                       src,
-                       alt,
-                       fallbackSrc = "/images/fallback.jpg",
-                       ...props
-                   }: SmartImageProps) {
+                        variant = "responsive",
+                        className,
+                        src,
+                        alt,
+                        fallbackSrc = "/images/fallback.jpg",
+                        ...props
+                    }: SmartImageProps) {
 
     const initialSrc = src ? String(src) : fallbackSrc;
 
     const [imgSrc, setImgSrc] = useState(initialSrc);
 
     const handleError = () => {
-        if (imgSrc !== fallbackSrc) {
-            setImgSrc(fallbackSrc);
-        }
+        setImgSrc(fallbackSrc);
     };
 
+    if (variant === "rounded") {
+        return (
+            <Image
+                {...props}
+                src={imgSrc}
+                alt={alt}
+                onError={handleError}
+                className={cn("rounded-full object-cover", className)}
+            />
+        );
+    }
+
     return (
-        <>
-            {variant === "profile" ? (
-                <Image
-                    {...props}
-                    src={imgSrc}
-                    alt={alt}
-                    onError={handleError}
-                    className={cn("rounded-full object-cover", className)}
-                />
-            ) : (
-                <div
-                    className={cn(
-                        "relative w-full overflow-hidden shadow-lg aspect-[16/9] rounded-2xl",
-                        className
-                    )}
-                >
-                    <Image
-                        {...props}
-                        src={imgSrc}
-                        alt={alt}
-                        fill
-                        onError={handleError}
-                        className="object-cover"
-                    />
-                </div>
+        <div
+            className = {
+            cn(
+                "relative w-full overflow-hidden shadow-lg aspect-[16/9] rounded-2xl",
+                className
             )}
-        </>
+        >
+            <Image
+                {...props}
+                src={imgSrc}
+                alt={alt}
+                fill
+                onError={handleError}
+                className={"object-cover"}
+            />
+        </div>
     );
 }
 
-export default SmartImage
+export default SmartImage;

@@ -66,11 +66,8 @@ function Skills() {
                         className="snap-start shrink-0 w-[92%] sm:w-[48%] lg:w-[32%] flex flex-col gap-4"
                     >
                         <SmartImage
-                            variant={"profile"}
                             src={slide.image}
                             alt={slide.title}
-                            width={500}
-                            height={400}
                             className={"rounded-2xl h-56 w-full object-cover"}
                         />
 
