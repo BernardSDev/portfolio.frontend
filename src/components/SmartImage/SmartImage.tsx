@@ -1,8 +1,8 @@
 "use client";
 
-import Image, { ImageProps } from "next/image";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
+import Image, {ImageProps} from "next/image";
+import {useState} from "react";
+import {cn} from "@/lib/utils";
 
 interface SmartImageProps extends ImageProps {
     variant?: "profile" | "feature";
@@ -10,14 +10,15 @@ interface SmartImageProps extends ImageProps {
     fallbackSrc?: string;
 }
 
-export default function SmartImage({
-                                       variant = "feature",
-                                       className,
-                                       src,
-                                       alt,
-                                       fallbackSrc = "/images/fallback.jpg",
-                                       ...props
-                                   }: SmartImageProps) {
+function SmartImage({
+                       variant = "feature",
+                       className,
+                       src,
+                       alt,
+                       fallbackSrc = "/images/fallback.jpg",
+                       ...props
+                   }: SmartImageProps) {
+
     const initialSrc = src ? String(src) : fallbackSrc;
 
     const [imgSrc, setImgSrc] = useState(initialSrc);
@@ -58,3 +59,5 @@ export default function SmartImage({
         </>
     );
 }
+
+export default SmartImage
