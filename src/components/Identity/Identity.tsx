@@ -1,6 +1,6 @@
 import Image from "next/image";
-import {FaGithub, FaWhatsapp, FaLinkedin} from "react-icons/fa"
-import {RiTwitterXLine} from "react-icons/ri";
+import SocialLinkItem from "@/components/SocialLink/SocialLinkItem";
+import {SocialLinks} from "@/data/SocialLinks";
 
 function Identity() {
     return(
@@ -26,38 +26,16 @@ function Identity() {
                 commodo lectus.
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-3">
-                <a
-                    href="https://github.com/BernardSDev"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary"
-                >
-                    <FaGithub size={28} />
-                </a>
-                <a
-                    href="https://www.linkedin.com/in/bernard-s-apoh-b04134230/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary"
-                >
-                    <FaLinkedin size={28} />
-                </a>
-                <a
-                    href="https://x.com/BernardSam_Apoh"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary"
-                >
-                    <RiTwitterXLine size={28} />
-                </a>
-                <a
-                    href="https://wa.me/233248315982"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary"
-                >
-                    <FaWhatsapp size={28} />
-                </a>
+                {
+                    SocialLinks.map(({href, icon: Icon}) => (
+                        <SocialLinkItem
+                            key={href}
+                            href={href}
+                        >
+                            <Icon size={28} />
+                        </SocialLinkItem>
+                    ))
+                }
 
                 <input
                     placeholder={"Connect via mail"}
