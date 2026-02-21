@@ -7,6 +7,7 @@ import {SkillData} from "@/data/SkillData";
 import Link from "next/link";
 import SmartImage from "@/components/SmartImage/SmartImage";
 import {capText} from "@/helpers/capText";
+import SmartButton from "@/components/SmartButton/SmartButton";
 
 function Skills() {
     const containerRef = useRef<HTMLDivElement>(null)
@@ -80,29 +81,21 @@ function Skills() {
             </div>
 
             <div className="flex justify-end gap-3 mt-6">
-                <button
+                <SmartButton
+                    variant="circle"
                     onClick={() => scroll("left")}
                     disabled={isAtStart}
-                    className={`text-primary rounded-full transition flex items-center justify-center p-2
-                        ${isAtStart
-                        ? "bg-border/20 cursor-default"
-                        : "bg-border hover:opacity-90 cursor-pointer"
-                    }`}
                 >
                     <GrFormPrevious size={28} />
-                </button>
+                </SmartButton>
 
-                <button
+                <SmartButton
+                    variant="circle"
                     onClick={() => scroll("right")}
                     disabled={isAtEnd}
-                    className={`text-primary rounded-full transition flex items-center justify-center p-2
-                    ${isAtEnd
-                        ? "bg-border/20 cursor-default"
-                        : "bg-border hover:opacity-90 cursor-pointer"
-                    }`}
                 >
                     <MdOutlineNavigateNext size={28} />
-                </button>
+                </SmartButton>
             </div>
         </div>
     )

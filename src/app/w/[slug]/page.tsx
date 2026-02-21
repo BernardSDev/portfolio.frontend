@@ -4,6 +4,7 @@ import { useRouter, useParams } from "next/navigation"
 import { SkillData } from "@/data/SkillData"
 import { IoIosArrowRoundBack } from "react-icons/io";
 import SmartImage from "@/components/SmartImage/SmartImage";
+import SmartButton from "@/components/SmartButton/SmartButton";
 
 
 export default function Page() {
@@ -19,12 +20,9 @@ export default function Page() {
             <div className="max-w-4xl mx-auto px-4 py-16 text-center">
                 <p className="text-gray-500 mb-4">Content not found.</p>
 
-                <button
-                    onClick={() => router.back()}
-                    className="text-blue-600 hover:underline cursor-pointer"
-                >
+                <SmartButton variant="ghost" onClick={() => router.back()}>
                     <IoIosArrowRoundBack size={28} />
-                </button>
+                </SmartButton>
             </div>
         )
     }
@@ -32,12 +30,9 @@ export default function Page() {
     return (
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
 
-            <button
-                onClick={() => router.back()}
-                className="text-sm text-primary hover:underline mb-6 cursor-pointer flex items-center justify-center"
-            >
+            <SmartButton onClick={() => router.back()}>
                 <IoIosArrowRoundBack size={28} /> Go Back
-            </button>
+            </SmartButton>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-8">
                 {skill.title}
