@@ -10,13 +10,13 @@ interface Props {
 function BackButton({
                         onClick,
                         label = "Go Back",
-                        variant = "primary" // use an existing variant
+                        variant = "primary"
                     }: Props) {
-    return (
-        <SmartButton variant={variant} onClick={onClick}>
-            <IoIosArrowRoundBack size={28} />
-            {label && <span>{label}</span>}
-        </SmartButton>
+    return(
+            <SmartButton variant={variant} onClick={onClick}>
+                <IoIosArrowRoundBack size={28}/>
+                {label && <span>{label}</span>}
+            </SmartButton>
     )
 }
 
