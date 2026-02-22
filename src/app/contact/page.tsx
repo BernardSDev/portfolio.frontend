@@ -6,9 +6,9 @@ import BackButton from "@/components/BackButton/BackButton";
 export default function ContactPage() {
     const router = useRouter()
 
-    return (
-        <main className="min-h-screen bg-background flex items-center justify-center p-6">
-            <div className="w-full max-w-3xl bg-background rounded-3xl p-8 md:p-12">
+    return(
+        <main className="min-h-screen bg-background flex items-center justify-center">
+            <div className="w-full max-w-3xl bg-background">
                 <BackButton onClick={() => router.back()} />
 
                 <h1 className="text-2xl font-medium text-primary mb-8">
@@ -19,7 +19,7 @@ export default function ContactPage() {
                     <div className="flex flex-col gap-2">
                         <label className="text-sm text-gray-300">Name</label>
                         <input
-                            className="w-full bg-transparent border border-gray-500/50 rounded-2xl px-5 py-4 text-white outline-none focus:border-indigo-400 transition"
+                            className="w-full bg-transparent border border-gray-500/50 rounded-2xl px-5 py-4 text-foreground outline-none focus:border-primary transition"
                             placeholder="Enter your name"
                         />
                     </div>
@@ -28,7 +28,7 @@ export default function ContactPage() {
                         <label className="text-sm text-gray-300">Email</label>
                         <input
                             type="email"
-                            className="w-full bg-transparent border border-gray-500/50 rounded-2xl px-5 py-4 text-white outline-none focus:border-b transition"
+                            className="w-full bg-transparent border border-gray-500/50 rounded-2xl px-5 py-4 text-foreground outline-none focus:border-primary transition"
                             placeholder="Enter your email"
                         />
                     </div>
@@ -37,7 +37,7 @@ export default function ContactPage() {
                         <label className="text-sm text-gray-300">Message</label>
                         <textarea
                             rows={7}
-                            className="w-full bg-transparent border border-gray-500/50 rounded-2xl px-5 py-4 text-white outline-none resize-none transition"
+                            className="w-full bg-transparent border border-gray-500/50 rounded-2xl px-5 py-4 text-foreground outline-none focus:border-primary resize-none transition"
                             placeholder="Write your message..."
                         />
                     </div>
