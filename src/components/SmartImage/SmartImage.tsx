@@ -29,13 +29,20 @@ function SmartImage({
 
     if (variant === "rounded") {
         return (
-            <Image
-                {...props}
-                src={imgSrc}
-                alt={alt}
-                onError={handleError}
-                className={cn("rounded-full object-cover", className)}
-            />
+            <div
+                className={cn(
+                    "relative overflow-hidden rounded-full w-24 h-24 flex-shrink-0",
+                    className
+                )}
+            >
+                <Image
+                    {...props}
+                    src={imgSrc}
+                    alt={alt}
+                    onError={handleError}
+                    className={"object-cover"}
+                />
+            </div>
         );
     }
 
