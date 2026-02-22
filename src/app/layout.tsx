@@ -7,7 +7,13 @@ import "./globals.css";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
-export const metadata: Metadata = {title: "Bernard S. Apoh"};
+export const metadata: Metadata =
+        {
+            title: "Bernard S. Apoh",
+            icons: {
+            icon: "/bernard.png",
+        },
+    };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
     return (
