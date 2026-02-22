@@ -13,7 +13,7 @@ function SkillCardInfo({title, text}: Props) {
             </h2>
 
             <p className="text-sm sm:text-base text-foreground/70 leading-relaxed">
-                {capText(text, 47)}
+                {capText(text, 60)}
             </p>
         </div>
     )
