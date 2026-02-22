@@ -4,7 +4,7 @@ import ConnectCTA from "@/components/ConnectCTA/ConnectCTA";
 
 function ProfileConnections() {
     return (
-        <div className={"mt-6 flex flex-wrap items-center gap-3"}>
+        <div className={"mt-6 flex flex-wrap items-center gap-2"}>
             {
                 SocialLinks.map(({ href, icon: Icon }) => (
                     <SocialLinkItem

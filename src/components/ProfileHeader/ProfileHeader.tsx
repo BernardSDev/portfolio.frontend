@@ -12,7 +12,7 @@ function ProfileHeader({
                            imageSrc
 }: Props) {
     return (
-        <div className={"flex flex-col sm:flex-row gap-4 sm:items-center"}>
+        <div className={"flex gap-4"}>
             <SmartImage
                 variant={"rounded"}
                 src={imageSrc}
